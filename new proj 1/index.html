@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+
+
+        <header>
+            <div class="text">
+                <h4 style="color:lightcyan">My balance</h4>
+                <h1 style="color:#ffff">$921.48</h1>
+            </div>
+            <div class="circles">
+             <div></div>
+             <div></div>
+            </div>
+        </header>
+
+        <section>
+            <h2 style="margin-bottom:2%">Spending - Last 7 days</h2>
+            <div class="barchart" id="barchart">
+           
+              <div style="width:30px;height:1.913rem;
+              background-color:blueviolet;
+              "></div>
+            
+            </div>
+         <div style="width:100%;
+         background-color:hsla(34, 3%, 59%, 0.315);
+         height: 2px;"></div>
+            <div class="summary">
+
+         <div class="sumtext">
+             <h4 style="margin-bottom:0;
+             font-size: 0.98rem;">Total this month</h4>
+             <h1 style="margin-top:6px;
+             font-size: 2.4rem;">$478.33</h1>
+         </div>
+
+         <div class="sumtext2">
+            <h4 style="margin-bottom:0;
+            font-size: 0.98rem;
+            color:black">+2.4%</h4>
+            <h4 style="margin-top:6px;
+            font-size: 0.98rem;">from last month</h1>
+        </div>
+            </div>
+        </section>
+       
+    </div>
+</body>
+
+<script>
+  var barchart=document.getElementById("barchart");
+  var arr;
+  const myRequest = new Request('data.json');
+  var n=0;
+fetch(myRequest).then(response => response.json())
+.then(data =>{
+    arr=data;
+    var newhtml='';
+const weekday = ["sun","mon","tue","wed","thu","fri","sat"];
+
+const d = new Date();
+let day = weekday[d.getDay()];
+let color='';
+console.log(arr[0]);
+for(let j=0;j<arr.length;j++)
+{
+    i=arr[j];
+    if(i.day==day)
+    {
+      color='var( --Cyan)';
+    }
+    else{
+        color='var(--Softred)'
+    }
+    let amts="$"+i.amount;
+  newhtml+=` <div><div  class="amtlabels" style="opacity:0%;">${amts}</div><div class="bars"`+
+    ' style="'+ `background-color:${color};width: 30px;height:`+
+    ` ${i.amount+15}px;`+
+      'border-radius: 5px;">'+
+               '</div><p>'
+               + `${i.day}</p>`+
+            '</div>';
+            console.log(newhtml);
+
+            if(j+1==arr.length)
+            {
+                barchart.innerHTML=newhtml;
+                
+                var k=document.querySelectorAll(".bars");
+            
+              
+                var l=document.querySelectorAll(".amtlabels");
+               
+               
+                for(let j=0;j<k.length;j++)
+                {
+            
+                    console.log('mouseover');
+                    k[j].addEventListener("mouseover",()=>{
+                        l[j].style.opacity="100%";
+                    })
+                }
+
+                for(let j=0;j<k.length;j++)
+                {
+                    console.log('mouseout');
+                    k[j].addEventListener("mouseout",()=>{
+                        l[j].style.opacity="0%";
+                    })
+                }
+            }
+            
+}
+
+
+    
+});
+
+
+
+
+
+</script>
+
+</html>

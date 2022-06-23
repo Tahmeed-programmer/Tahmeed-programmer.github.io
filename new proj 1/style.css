@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root{
+    --Softred: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Darkbrown: hsl(25, 47%, 15%);
+    --Mediumbrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --paleorange: hsl(33, 100%, 98%);
+}
+
+body{
+    padding:0;
+    margin:0;
+    background-color: var(--Cream);
+    font-family: 'DM Sans';
+  font-style: normal;
+
+}
+
+.content{
+    
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header{
+    width: 63%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    background-color: var(--Softred);
+    display: flex;
+    justify-content: space-between;
+    padding:0 15px ;
+    max-width: 440px;
+}
+
+
+
+
+.circles>div{
+    background-color: black;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+}
+
+.circles>div:nth-child(2){
+    background-color: transparent;
+    border:2px solid white;
+    margin-right: -20%;
+    height: 3.8rem;
+    width: 3.8rem;
+}
+
+.circles{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+section{
+    padding: 20px;
+    width:63%;
+    max-width: 440px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+.amtlabels{
+   font-size: 0.9rem;
+    height:2.6rem;
+    width: 3.1rem;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6%;
+    opacity: 100%;
+}
+
+.barchart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    color: var(--Mediumbrown);
+}
+
+.barchart p{
+    margin-top: 0%;
+    text-align: center;
+}
+
+.bars{
+    margin-left: 0.6rem;
+}
+
+.bars:hover{
+    opacity: 70%;
+    cursor: pointer;
+    position: relative;
+}
+
+.summary{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0%;
+}
+
+.summary h4{
+    color: var(--Mediumbrown);
+}
+
+.sumtext2{
+    display: flex;
+    flex-direction: column;
+    height:5%;
+    margin-top: 10px;
+    
+}
+
+@media screen and (max-width:500px)
+{
+    section{
+        width: 85%;
+        
+    }
+    header{
+        width:85%;
+    }
+
+    .content{
+        align-content:h;
+        justify-content: h;
+        width: 100%;
+    }
+}
