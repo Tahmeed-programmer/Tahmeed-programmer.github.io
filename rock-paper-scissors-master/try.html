@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="playagain">click me</button>
+</body>
+
+<script>
+var playagain=document.getElementById("playagain");
+playagain.addEventListener("click",()=>{
+      console.log("helloo");
+   })
+rules1("scissors",'paper') ;
+ 
+ function rules1(a,b)
+      {
+        console.log("a="+a+" b="+b); 
+        if((a=='paper'&& b=='stone')||(a=="scissors"&&b=='paper')||
+        (a=='stone'&& b=='scissors')){
+            console.log("a="+a+" b="+b);
+           
+        }
+      } 
+</script>
+</html>
+
+ 
