@@ -314,8 +314,18 @@ section img{
     .result #playagain{
         width: 6.5rem;
     }
-    .rules{
-        margin-top: 30%;
+     .result{
+   
+        height: fit-content;
+        position: absolute;
+        margin-top: 50%;
+        margin-right: 10%;
+        
+    }
+
+    .gamestart .paper{
+        width: 9.7rem;
+       height: 10rem; 
     }
 
     body{
@@ -452,7 +462,7 @@ margin-top: 18%;
    
     height: fit-content;
     position: absolute;
-    margin-top: 70%;
+    margin-top: 69.8%;
     
 }
 
