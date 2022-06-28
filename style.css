@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@300&display=swap');
+
+:root{
+    --primary:hsl(257, 40%, 49%);
+
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+   background-image: url(images/bg-mobile.svg);
+    background-position: center;
+    background-color: var(--primary);
+    background-size: cover;
+}
+
+button:hover{
+    background-color:  hsl(300, 69%, 71%);
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.main-container{
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns:1fr;
+    margin-right: 8%;
+}
+
+.item1 img{
+  width: 96%;
+}
+
+.item2{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container2{
+    
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+  
+
+}
+
+.main-container2>div:nth-child(odd){
+    border: 2px solid black;
+    background-color: aqua;
+}
+
+.main-container2>div:nth-child(even){
+    border: 2px solid rgb(194, 29, 29);
+    background-color: rgb(255, 136, 0);
+}
+
+.item11{
+ 
+}
+
+.item22{
+
+display: flex;
+flex-wrap: wrap;
+}
+
+.item33{
+   
+}
+
+.item44{
+   grid-column:1/-1;
+   grid-row: 2/4;
+}
+
+.battery{
+    width: 40%;
+    height: 5rem;
+     background-color: aliceblue;
+     border: 2px solid black;
+     border-radius: 10px;
+     margin-top: 30%;
+     margin-left: 30%;
+     position: relative;
+     
+     
+}
+.battery::after{
+    content: "";
+    background-color: aqua;
+    position: absolute;
+    left:99%;
+    top:30%;
+    height: 30px;
+    width: 15px;
+    background-color: rgb(255, 136, 0);
+    border-radius: 5px;
+    
+}
+.battery::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:10%;
+    background-color: green;
+    border-radius: 5px;
+    animation: fill 6s linear infinite;
+}
+
+
+@keyframes fill{
+    0%{
+        width: 30%;
+    }
+    50%{
+        width: 70%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:710px){
+    body{
+        margin: 0%;
+        padding: 0%;
+        background-image: url(images/bg-desktop.svg);
+        background-position: top left;
+        background-size: auto max(100%,50rem);
+        background-color: var(--primary);
+    }
+    .main-container{
+        grid-template-columns:1fr minmax(500px,1fr);
+        
+       
+    }
+    .item1 img{
+        width: auto;
+    }
+}
