@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="menumodal" class="menumodal hide">
+            <div>
+                <img id="close2" src="images/icon-close1.svg" alt="">
+            </div>
+            <ul>
+                <li><a href="">Collections</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    
+    
+      <header>
+          <div class="cartdisplay" id="cartdisplay">
+              <div style="padding-top: 4px;
+              padding-left: 10px;
+              padding-bottom: 1.2rem;
+              border-bottom: 1px solid hsl(220, 14%, 75%);">Cart</div>
+    
+                <div id="cart-inventory">
+                    <div style="display: flex;
+                    justify-content: space-evenly;
+                   
+                    align-items: center;
+                    padding: 5px;">
+    
+                    <img id="" src="images/image-product-3-thumbnail.jpg" alt="">
+                    <p style="margin-left: 3%;">
+                        Fall Limited Edition Sneakers $125.0 x 3 
+                      <span style="color:black">&nbsp&nbsp$375.00</span>
+                    </p>
+                    
+    
+                </div>
+                
+            </div>
+    
+              <button id="checkbutton">Checkout</button>
+              <br/>
+          </div>
+    
+    
+          <div class="top-left-head">
+              <div id="menu" class="menu">
+                  <img src="images/icon-menu.svg" alt="">
+              </div>
+          <div><img src="images/logo.svg" alt=""></div>
+          <ul>
+              <li><a href=""> Collections</a></li>
+              <li><a href="">Men</a></li>
+              <li><a href="">Women</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="top-right-head">
+            <div>
+                <img id="cart" style="color: grey;" src="images/icon-cart.svg" alt="">
+            </div>
+            <div style="cursor:pointer">
+                <img style="width:3rem" src="images/image-avatar.png" alt="">
+            </div>
+        </div>
+      </header>
+    
+      <div class="modal" id="modal">
+          
+       
+           
+      
+          <div class="box">
+            <div id="left-icon">
+                <img src="images/icon-previous.svg" alt="">
+            </div>
+            <div id="right-icon">
+                <img src="images/icon-next.svg" alt="">
+            </div>
+            <div id="close">
+                <img src="images/icon-close.svg" alt="">
+            </div>
+    
+          
+    
+                <div class="large-image">
+                    <img id="img1" src="images/image-product-1.jpg" alt="">
+                    <div class="thumbnails">
+                        <div class="thumbimg"><img src="images/image-product-1-thumbnail.jpg" alt=""></div>
+                        <div class="thumbimg"><img src="images/image-product-2-thumbnail.jpg" alt=""></div>
+                        <div class="thumbimg"><img src="images/image-product-3-thumbnail.jpg" alt=""></div>
+                        <div class="thumbimg"><img src="images/image-product-4-thumbnail.jpg" alt=""></div>
+                    </div>
+                   
+                
+              </div>
+           
+          </div>
+      </div>
+      
+     <div class="lbox"> <div id="left-new-arrow" class="left-new-arrow"><img src="images/icon-previous.svg" alt=""></div> </div>
+      <main>
+         
+    
+            <div class="large-image">
+               <div style="display: flex;
+               ">
+              
+                <img id="img" src="images/image-product-1.jpg" alt="">
+                <div id="right-new-arrow" class="right-new-arrow"><img src="images/icon-next.svg" alt=""></div>
+               </div>
+                <div class="thumbnails">
+                    <div class="thumbimg"><img src="images/image-product-1-thumbnail.jpg" alt=""></div>
+                    <div class="thumbimg"><img src="images/image-product-2-thumbnail.jpg" alt=""></div>
+                    <div class="thumbimg"><img src="images/image-product-3-thumbnail.jpg" alt=""></div>
+                    <div class="thumbimg"><img src="images/image-product-4-thumbnail.jpg" alt=""></div>
+                </div>
+            </div>
+    
+            <div class="description">
+                <h4 style="margin-bottom:0%">SNEAKER COMPANY</h4>
+                <h1 id="itemdescr" style="margin-top:3%">Fall Limited Edition Sneakers</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <div style="display:flex;
+                align-items: center;
+                height: 2rem;
+                margin-top: 0%;">
+                    <h2> $125.00</h2>
+                    <div class="price-tag">50%</div>
+                </div>
+                <h4 style="position: relative;
+                color: hsl(220, 14%, 75%);
+                margin-top: 1%;
+                width: 50%;
+                max-width: 66px;
+                color: hsl(219, 9%, 45%);">$250.00
+                <div style="position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color:hsl(220, 14%, 75%);
+                top:10px;"></div>
+            </h4>
+    
+                <div class="desc-button" style="display: flex;">
+                    <div class="addbutton">
+                        <div id="minus" style="display: flex;
+                        align-items: center;"><img src="images/icon-minus.svg" alt=""></div>
+                        <div id="number">0</div>
+                        <div id="plus" style="display: flex;
+                        align-items: center;"><img src="images/icon-plus.svg" alt=""></div>
+                    </div>
+                    <div> 
+                        <button id="addtocart">
+                            <img style="margin-right:6%" src="images/icon-cart1.svg" alt="">
+                           <div> Add to cart</div>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+    
+         
+      </main>
+    </div>
+  
+  <br/>
+<footer>
+  <section class="ft-main">
+    <div class="ft-main-item">
+      <h2 class="ft-title">About</h2>
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Resources</h2>
+      <ul>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">Webinars</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Contact</h2>
+      <ul>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Sales</a></li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Stay Updated</h2>
+      <p>Subscribe to our newsletter to get our latest news.</p>
+      <form>
+        <input type="email" name="email" placeholder="Enter email address">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+  </section>
+ 
+  <!-- Footer social -->
+  <section class="ft-social">
+    <ul class="ft-social-list">
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </section>
+ 
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+      <li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li>&copy; 2019 Copyright Nowrap Inc.</li>
+    </ul>
+  </section>
+</footer>
+
+
+</body>
+
+<script>
+
+    var img=document.getElementById("img");
+    var modal=document.getElementById("modal");
+   var thumbimg=document.querySelectorAll(".thumbimg");
+    var lefticon=document.getElementById("left-icon");
+    var righticon=document.getElementById("right-icon");
+    var count=0;
+    var tr=document.getElementById("close");
+    var img1=document.getElementById("img1");
+    var cart=document.getElementById("cart");
+    var cartdisplay=document.getElementById("cartdisplay");
+
+    var menu=document.getElementById("menu");
+    var menumodal=document.getElementById("menumodal");
+    var close2=document.getElementById("close2");
+
+    var leftnewarrow=document.getElementById("left-new-arrow");
+    var rightnewarrow=document.getElementById("right-new-arrow");
+
+    var minus=document.getElementById("minus");
+    var plus=document.getElementById("plus");
+    var cartinventory=document.getElementById("cart-inventory");  
+    
+    var checkbutton=document.getElementById("checkbutton");
+
+    var count4=document.getElementById("number");
+    
+    var addtocart=document.getElementById('addtocart');
+
+    var imgarr=[{imgsrc:"images/image-product-1.jpg",number:0},
+    {imgsrc:"images/image-product-2.jpg",number:0},
+    {imgsrc:"images/image-product-3.jpg",number:0},
+    {imgsrc:"images/image-product-4.jpg",number:0}]
+
+    let p=img.getAttribute("src");
+    function getstring()
+    {
+        return img.getAttribute("src");
+    }
+    var obj=[];
+    console.log(obj[0]);
+
+    //create the object array , dynamically add element to the array if it is not there else
+    // update it, 
+    addtocart.addEventListener("click",()=>{
+
+        let count3=document.getElementById("number");
+        let k=0;
+
+    let counttext=count3.textContent.trim();
+
+        let newobj={imgsrc:img.getAttribute("src"),number:counttext};
+        if(obj.length==0)
+        {
+            obj.push(newobj);
+            console.log("new ",obj[0]);
+            carthtml='';
+            for(let i=0;i<obj.length;i++)
+            {
+                carthtml+='<div style="display: flex;'+
+                'justify-content: space-evenly;'+
+               
+               'align-items: center;'+
+               ' padding: 5px;">'+
+
+                `<img id="" src="${obj[i].imgsrc}" alt="">`+
+                '<p style="margin-left: 3%;">'+
+                   `Fall Limited Edition Sneakers $125.0 x ${obj[i].number}`+
+                  `<span style="color:black">&nbsp&nbsp$375.00</span>`+
+               ' </p>'+
+               ' <div>'+
+               `<img class="del" data="${obj[i].imgsrc}" style="width: 1.5rem;`+
+                'height: 1.5rem;"'+
+                 'src="images/icon-delete.svg" alt=""></div>'+
+
+            '</div>'
+            }
+            cartinventory.innerHTML=carthtml;
+            let delarr=document.getElementsByClassName("del");
+
+    console.log("see this 1:"+delarr[0]);
+
+    for(let i=0;i<delarr.length;i++)
+    {
+        delarr[i].addEventListener("click",()=>{
+
+            let text = delarr[i].parentElement.previousElementSibling.previousElementSibling;
+              text=text.getAttribute("src");
+            let k=0;
+          //console.log("text is ",text);
+          let found=obj.some(y=>{
+        if(y.imgsrc==text)
+          {
+          return true;
+            }
+         else{
+           k+=1;}})
+
+if(found){
+
+    obj=obj.splice(k,1);
+    delarr[i].parentElement.previousElementSibling.previousElementSibling.parentElement.remove();
+
+    delarr[i].splice(k,1);
+}
+        })
+        
+
+        
+    }
+           
+        }
+        else{
+            let isFound = obj.some(element => {
+       if (element.imgsrc ===img.getAttribute("src") ) {
+              return true;
+                          }
+                        else{
+                             k+=1;
+                        }
+                    })
+
+        if(isFound)
+        {
+            obj[k].number=counttext;
+            console.log("biii");
+            console.log(obj[k]);
+            k=0;
+            carthtml='';
+            for(let i=0;i<obj.length;i++)
+            {
+                carthtml+='<div style="display: flex;'+
+                'justify-content: space-evenly;'+
+               
+               'align-items: center;'+
+               ' padding: 5px;">'+
+
+                `<img id="" src="${obj[i].imgsrc}" alt="">`+
+                '<p style="margin-left: 3%;">'+
+                   `Fall Limited Edition Sneakers $125.0 x ${obj[i].number}`+
+                  `<span style="color:black">&nbsp&nbsp$375.00</span>`+
+               ' </p>'+
+               ' <div>'+
+               ` <img class="del" data="${obj[i].imgsrc}" style="width: 1.5rem;`+
+                'height: 1.5rem;"'+
+                 'src="images/icon-delete.svg" alt=""></div>'+
+
+            '</div>'
+            }
+            cartinventory.innerHTML=carthtml;
+
+            let delarr=document.getElementsByClassName("del");
+
+    console.log("see this 2 :"+delarr[0]);
+
+    for(let i=0;i<delarr.length;i++)
+    {
+        delarr[i].addEventListener("click",()=>{
+
+            let text = delarr[i].parentElement.previousElementSibling.previousElementSibling;
+              text=text.getAttribute("src");
+            let k=0;
+          console.log("text is ",text);
+          let found=obj.some(y=>{
+        if(y.imgsrc==text)
+          {
+          return true;
+            }
+         else{
+           k+=1;}})
+
+if(found){
+
+    obj=obj.splice(k,1);
+    delarr[i].parentElement.previousElementSibling.previousElementSibling.parentElement.remove();
+   
+    delarr[i].splice(k,1);
+}
+        })
+        
+
+        
+    }
+
+           
+        }
+        else{
+            obj.push(newobj);
+            carthtml=''
+            for(let i=0;i<obj.length;i++)
+            {
+                carthtml+='<div style="display: flex;'+
+                'justify-content: space-evenly;'+
+               
+               'align-items: center;'+
+               ' padding: 5px;">'+
+
+                `<img id="" src="${obj[i].imgsrc}" alt="">`+
+                '<p style="margin-left: 3%;">'+
+                   `Fall Limited Edition Sneakers $125.0 x ${obj[i].number}`+
+                  `<span style="color:black">&nbsp&nbsp$375.00</span>`+
+               ' </p>'+
+               ' <div>'+
+               ` <img class="del" data="${obj[i].imgsrc}"style="width: 1.5rem;`+
+                'height: 1.5rem;"'+
+                 'src="images/icon-delete.svg" alt=""></div>'+
+
+            '</div>'
+            }
+
+            cartinventory.innerHTML=carthtml;
+            let delarr=document.getElementsByClassName("del");
+
+    console.log("see this 3 :"+delarr[0]);
+
+    for(let i=0;i<delarr.length;i++)
+    {
+        delarr[i].addEventListener("click",()=>{
+
+            let text = delarr[i].parentElement.previousElementSibling.previousElementSibling;
+              text=text.getAttribute("src");
+            let k=0;
+          console.log("text is ",text);
+          let found=obj.some(y=>{
+        if(y.imgsrc==text)
+          {
+          return true;
+            }
+         else{
+           k+=1;}})
+
+if(found){
+
+    obj=obj.splice(k,1);
+    delarr[i].parentElement.previousElementSibling.previousElementSibling.parentElement.remove();
+    delarr[i].splice(k,1);
+
+}
+        })
+        
+
+        
+    }
+            cartinventory.innerHTML=carthtml;
+        }
+    }
+   
+
+}
+        
+    )
+        
+
+    counts=0;
+
+    var carthtml="";
+
+    
+
+    
+
+    
+    cartinventory.innerHTML=carthtml;
+
+    
+    minus.addEventListener("click",()=>{
+
+        let count3=document.getElementById("number");
+
+    let counttext=count3.textContent.trim();
+        let x=parseInt(counttext);
+        if(x<=0){
+         count3.textContent=x;
+        }
+        else{
+             x-=1;
+
+             let k=0;
+
+             let found=imgarr.some(y=>{
+        if(y.imgsrc==img.getAttribute("src"))
+       {
+        return true;
+        }
+      else{
+        k+=1;
+          }})
+        
+        if(found){
+            imgarr[k].number=x;
+        }
+             count3.textContent=x;
+        }
+       
+    })
+
+    plus.addEventListener("click",()=>{
+        let count3=document.getElementById("number");
+
+let counttext=count3.textContent.trim();
+        let y=parseInt(counttext);
+        
+       
+             y+=1;
+             let k=0;
+
+             let found=imgarr.some(s=>{
+        if(s.imgsrc==img.getAttribute("src"))
+       {
+        return true;
+        }
+      else{
+        k+=1;
+          }})
+        
+        if(found){
+            imgarr[k].number=y;
+        }
+             count3.textContent=y;
+        
+    })
+
+    leftnewarrow.addEventListener("click",()=>{
+        count-=1;
+        if(count<0)
+        {
+            count=thumbimg.length-1;
+        }
+        console.log(count);
+        let arr=thumbimg[count].children[0].getAttribute("src").split("-thumbnail");
+        let k=0;
+            let count3=document.getElementById("number");
+
+            let t=arr[0]+arr[1];
+
+             let found=imgarr.some(y=>{
+        if(y.imgsrc==t)
+       {
+        return true;
+        }
+      else{
+        k+=1;
+          }})
+        
+        if(found){
+            count3.textContent=imgarr[k].number;
+        }
+            img.src=arr[0]+arr[1];
+    })
+
+    rightnewarrow.addEventListener("click",()=>{
+        count+=1;
+        if(count==thumbimg.length)
+        {
+            count=0;
+        }
+        console.log(count);
+        let arr=thumbimg[count].children[0].getAttribute("src").split("-thumbnail");
+
+        let k=0;
+            let count3=document.getElementById("number");
+
+            let t=arr[0]+arr[1];
+
+             let found=imgarr.some(y=>{
+        if(y.imgsrc==t)
+       {
+        return true;
+        }
+      else{
+        k+=1;
+          }})
+        
+        if(found){
+            count3.textContent=imgarr[k].number;
+        }
+            img.src=arr[0]+arr[1];
+            
+    })
+
+    menu.addEventListener("click",()=>{
+        menumodal.classList.toggle("hide");
+    })
+
+    close2.addEventListener("click",()=>{
+        menumodal.classList.toggle("hide");
+    })
+
+
+    cart.addEventListener("click",()=>{
+        console.log(getComputedStyle(cartdisplay).display);
+        
+        if(getComputedStyle(cartdisplay).display=='none')
+        {
+            if(obj.length==0)
+            {
+                cartinventory.innerHTML="<h3 style='display:flex;justify-content:center;align-items:center;'>Your cart is empty</h3>";
+                checkbutton.style.display='none';
+            }
+            else{
+                checkbutton.style.display='block';
+            }
+            cartdisplay.style.display='flex';
+            console.log(getComputedStyle(cartdisplay).display);
+        }
+        else{
+            cartdisplay.style.display='none';
+        }
+        
+    })
+
+    tr.addEventListener("click",()=>{
+       modal.classList.toggle("show");
+    })
+
+    let i=0;
+    let j=0;
+    img.addEventListener("click",()=>{
+         console.log("j= ",j);
+
+         for(let i=0;i<thumbimg.length;i++)
+         {
+            let arr=thumbimg[i].children[0].getAttribute("src").split("-thumbnail");
+            let img2=arr[0]+arr[1];
+            if(img.getAttribute("src")==img2)
+            {
+                
+                img1.src=img2;
+                count=i;
+                break;
+            }
+
+         }
+         modal.classList.toggle("show");
+        
+        
+    })
+
+   
+
+    lefticon.addEventListener("click",()=>{
+        count-=1;
+        if(count<0)
+        {
+            count=thumbimg.length-1;
+        }
+        console.log(count);
+        let arr=thumbimg[count].children[0].getAttribute("src").split("-thumbnail");
+            img1.src=arr[0]+arr[1];
+            
+    })
+  
+    righticon.addEventListener("click",()=>{
+        count+=1;
+        if(count==thumbimg.length)
+        {
+            count=0;
+        }
+        console.log(count);
+        let arr=thumbimg[count].children[0].getAttribute("src").split("-thumbnail");
+            img1.src=arr[0]+arr[1];
+            
+    })
+
+
+    thumbimg.forEach(x=>{
+       
+        x.addEventListener("click",(e)=>{
+            console.log("helloo");
+            let arr=x.children[0].getAttribute("src").split("-thumbnail");
+            let k=0;
+            let count3=document.getElementById("number");
+
+            let t=arr[0]+arr[1];
+
+             let found=imgarr.some(y=>{
+        if(y.imgsrc==t)
+       {
+        return true;
+        }
+      else{
+        k+=1;
+          }})
+        
+        if(found){
+            count3.textContent=imgarr[k].number;
+        }
+            img.src=arr[0]+arr[1];
+            console.log(img.src);
+            
+        })
+    })
+
+</script>
+
+
+</html>
