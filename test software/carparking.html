@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+   <table style="background-color: rgba(255, 255, 255, 0.0001);
+   box-shadow: inset 0px 1px 0px #B9B9B9;
+   width:20rem; font-family:Arial, Helvetica, sans-serif;
+   border: 2px solid black;"><th style="text-align:center;border:2px solid grey;">Payment ID</<th>Username</<th>Email</<th>Paid</th>
+       <tr style="margin-top: 0%;
+       border: 2px solid black;"><td style="text-align:center;border:2px solid grey;">ssss</td>
+        <td style="text-align:center;">ssss</td>
+        <td style="text-align:center;">sss</td>
+        <td style="text-align:center;">ssss</td>
+      </tr>
+   </table>
+
+
+
+   <br />
+<font size='1'><table class='xdebug-error xe-uncaught-exception' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Fatal error: Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'reserved' in 'field list' in C:\xampp\htdocs\test software\checkcar.php on line <i>32</i></th></tr>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'reserved' in 'field list' in C:\xampp\htdocs\test software\checkcar.php on line <i>32</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0009</td><td bgcolor='#eeeeec' align='right'>419176</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='C:\xampp\htdocs\test software\checkcar.php' bgcolor='#eeeeec'>...\checkcar.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0198</td><td bgcolor='#eeeeec' align='right'>470816</td><td bgcolor='#eeeeec'><a href='http://www.php.net/PDOStatement.execute' target='_new'>execute</a>(  )</td><td title='C:\xampp\htdocs\test software\checkcar.php' bgcolor='#eeeeec'>...\checkcar.php<b>:</b>32</td></tr>
+</table></font>
+
+
+
+</body>
+
+
+<script>
+    var box=document.getElementById('box');
+    function position(e)
+    {
+        let s=e.getBoundingClientRect();
+        let d=box.getBoundingClientRect();
+        let diff=s.top-d.top;
+        let diff1=s.left-d.left;
+        console.log(diff,diff1);
+
+    }
+</script>
+</html>

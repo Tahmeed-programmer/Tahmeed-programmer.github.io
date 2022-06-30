@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="">
+   
+<div id="bar-nav" class="bar-nav ">
+        <div style="display: flex;justify-content:flex-end;
+        cursor: pointer;margin-right :10px;">
+
+            <i id="cross"style="color:red;margin-right:8px;"
+            class="fa-solid fa-bars fa-x fa-2x"></i>
+        </div>
+        <ul>
+<li><a href="">Book</a></li>
+<li><a href="">About</a></li>
+<li><a href="">Contact Us</a></li></ul>
+    </div>
+    <nav>
+        <div class="check">
+        <img class="img" src="images/logo.png">
+<div class="logo-title">StudBook</div>
+</div>
+
+
+
+
+<div class="link-container extra3">
+<ul >
+
+<li ><a href="book.html">Book</a></li>
+<li><a href="aboutus.html">About</a></li>
+<li><a href="contactus.php">Contact Us</a></li></ul>
+    </div>
+
+   
+
+    <div class="end-buttons"
+    style="display:flex;
+    margin-right: 5px;
+    flex-direction:column;
+    bottom: 2%;">
+        <i id="user" style="color:#3A3335;
+            font-size: 1.9rem;
+            ;"class="fas fa-user-circle"></i>
+            <i id="dropdown" style="padding-left: 2px;
+            margin-top: 2px; color:black;
+            cursor: pointer;font-size: 1.5rem;"
+             class="fa fa-chevron-circle-down"></i>
+             
+             
+     </div>
+    <div class="hamburger">
+        <i id="hamburger" style="color:#3A3335;
+            cursor: pointer;font-size: 1.4rem;"class="fa-solid fa-bars "></i>
+    </div>
+    </nav>
+
+
+
+
+
+    <div class="dropdowns"style="z-index:2000;
+    position: absolute;
+   
+    right:0px;
+    ">
+      <ul
+      style="list-style:none;
+      font-family:Roboto;
+      font-weight: bold;
+      margin-left: 0%;
+      padding-left: px;
+  ">
+          <li>
+           <a style="text-decoration:none;
+           color:#130e0f"
+           href="userprofile.php"><i class="fa-regular fa-user"></i>Profile</a></li>
+          
+          
+        <li>
+            <div id="logout" style="
+            cursor:pointer;
+            text-decoration:none;
+            color:#130e0f">
+            <i  class="fas fa-sign-out-alt"></i>Logout</div></li>
+      </ul>
+  </div>
+<div class="new-nav">
+    <ul>
+       <li><a style="cursor:pointer" href="tickets.php">My Tickets</a></li>
+       <li><a href="favoritestadiums.php">My Favorite Stadiums</a></li>
+       <li><a href="pastevents.php">My Recent Visited Events</a></li>
+    </ul>
+</div>
+
+<h1 style="font-family:Arial, Helvetica, sans-serif;
+padding-left: 10%;font-size:2.1rem;">Choose Stadium to Find Event</h1>
+
+
+
+<input style="font-weight: 600;
+font-family: Arial, Helvetica, sans-serif, FontAwesome;
+
+background: rgba(255, 255, 255, 0.9);
+border: 3px solid #6A6A6A;
+box-sizing: border-box;
+border-radius: 10px;
+margin-bottom: 2%;
+margin-left: 15%;margin-top: 3%;width:75%;max-width: 375px;height:24px;"
+type="search" placeholder="&#xf002; Search  Stadium  by  name" 
+onkeyup="search(this.value)" >
+<br/>
+
+
+
+
+<div class="search-area">
+
+</div>
+
+<p id="imp"
+style="font-family:sans-serif;
+font-weight: bold;
+color: #130e0f;
+font-size: 1.7rem;">Displaying All Results</p>
+<div class="event-boxes" id="event-boxes">
+
+
+
+ </div>
+ <br/>
+ <br/>
+
+    
+
+   
+
+
+ </body>
+
+
+
+ <script>
+     //var cross2=document.getElementById("cross2");
+     var modal=document.querySelector(".modal");
+      var id3=document.getElementById("cross");
+     var id4=document.getElementById("bar-nav");
+     var id5=document.getElementById("hamburger");
+     var dropdown=document.getElementById("dropdown");
+     var newdrop=document.querySelector(".dropdowns");
+     var logout=document.getElementById("logout");
+     var eventboxes=document.getElementById("event-boxes");
+     var searcharea=document.querySelector(".search-area");
+     var imp=document.getElementById("imp");
+
+
+     function star(e){
+         
+        var xhp = new XMLHttpRequest();
+    url='addfav.php?stadid='+e.getAttribute('value');
+xhp.onreadystatechange = function() {
+    if (xhp.readyState === 4){
+        console.log(xhp.responseText);
+        if(xhp.responseText=="Added")
+        {
+            alert("Added to Favorites");
+            e.style.color="yellow";
+        }
+        else{
+            alert("Removed from favorites");
+            e.style.color=xhp.responseText;
+        }
+       
+    }
+
+};
+xhp.open('GET', url);
+xhp.send();
+     }
+
+
+    
+
+     function search(str)
+     {
+         if(str.trim()=="")
+         {
+             eventboxes.style.display="flex";
+             searcharea.innerHTML='';
+             imp.style.display='block';
+         }
+         else{
+            imp.style.display='none';
+            eventboxes.style.display="none";
+            var url='search-event.php?stadium_name='+str;
+       var xhr=new XMLHttpRequest();
+       xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4){
+        console.log(xhr.responseText);
+        searcharea.innerHTML = xhr.responseText;
+    }
+};
+xhr.open('GET', url);
+xhr.send();
+         }
+        
+}
+
+     
+ 
+     logout.addEventListener("click",()=>{
+       alert("Logging Out!");
+       window.location.assign('logout.php');
+     })
+    
+     window.addEventListener('load', (event) => {
+        var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4){
+        console.log(xhr.responseText);
+        eventboxes.innerHTML = xhr.responseText;
+    }
+};
+xhr.open('POST', 'display-event.php');
+xhr.send();
+});
+
+     //cross2.addEventListener("click",()=>{
+     //    modal.classList.toggle("addmodal");
+   //  })
+ 
+     dropdown.addEventListener("click",()=>{
+ 
+     newdrop.classList.toggle("show-dropdown")
+     })
+ 
+     id5.addEventListener("click",()=>{
+         id4.classList.toggle("visible");
+     })
+     id3.addEventListener("click",()=>{
+             id4.classList.toggle("visible");
+     })
+ </script>
+ </html>

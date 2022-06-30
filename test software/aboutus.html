@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/4625bed273.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="bar-nav" class="bar-nav ">
+        <div style="display: flex;justify-content:flex-end;
+        cursor: pointer;">
+
+            <i id="cross"style="color:red"
+            class="fa-solid fa-bars fa-x fa-2x"></i>
+        </div>
+        <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="book.html">Book</a></li>
+<li><a href="aboutus.html">About</a></li>
+<li><a href="contactus.php">Contact Us</a></li></ul>
+    </div>
+    <nav>
+        <div class="check">
+        <img class="img" src="images/logo.png">
+<div class="logo-title">StudBook</div>
+</div>
+
+
+
+
+<div class="link-container">
+<ul>
+    <li><a href="index.html">index</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="contactus.php">Contact Us</a></li></ul>
+    </div>
+
+    <div class="end-buttons">
+        <button> <a  href="login.php">Login</a>
+         </button>
+         <button>
+             <div class=""> <a class="signin"href="signup.php">Sign up</a>
+                 </div>
+                 </button>
+             
+     </div>
+     <div class="hamburger">
+         <i id="hamburger" style="color:#3A3335;
+             cursor: pointer;font-size: 1.4rem;"class="fa-solid fa-bars "></i>
+     </div>
+     </nav>
+
+     <div class="main-img"
+    style="background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center center
+     center ;
+     filter: blur(10px)">
+    </div>
+ 
+    <div class="login-form">
+        <h1 style="background-color:azure;
+        font-family: Arial, Helvetica, sans-serif;">
+        ABOUT US</h1>
+        <div style="max-width:560px;
+        width:80%;background-color:antiquewhite;
+        color:black;padding: 5px;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione odit omnis consequuntur beatae. Quaerat ducimus ullam earum explicabo? Molestias consequatur fugiat sed porro quidem quos mollitia ab? At, tenetur ad?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, officia quos? Assumenda quod aliquid deleniti impedit, magni repudiandae. Nemo magni doloribus modi laborum hic consequatur. Numquam dignissimos eligendi expedita. Aut?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, quod accusamus saepe adipisci deserunt vero mollitia voluptatum, itaque non laudantium ad aliquid eum consequatur dicta, sequi repellendus voluptatibus nisi provident? </div>
+    </div>
+
+    </body>
+    <script>
+          var id3=document.getElementById("cross");
+    var id4=document.getElementById("bar-nav");
+    var id5=document.getElementById("hamburger");
+   
+    id5.addEventListener("click",()=>{
+        id4.classList.toggle("visible");
+    })
+    id3.addEventListener("click",()=>{
+            id4.classList.toggle("visible");
+    })
+    </script>
+    </html>
+
