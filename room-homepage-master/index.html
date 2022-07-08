@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+
+    <div class="top-content">
+       
+        <header id="header" id="header">
+
+            <div class="sidemenu " id="sidemenu">
+                <div id="close" class="close">
+                    <img src="images/icon-close.svg" alt="">
+                </div>
+             <ul class="display">
+                <li><a href="">home</a></li>
+                <li><a href="">shop</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">contact</a></li>
+             </ul>
+            </div>
+            <div class="head">
+                <div class="hamburger" id="hamburger">
+                    <img src="images/icon-hamburger.svg" alt="">
+                </div>
+                <h2>room</h2>
+            
+                <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">shop</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">contact</a></li></ul>
+            </div>
+               
+                </header>
+
+
+                <div class="top-right-side">
+
+                      <div class="top-right-text" id="top-right-text">
+                          <h1>
+                            Discover innovative ways to decorate
+                          </h1>
+                          <p>
+                            We provide unmatched quality, comfort, and style for property owners across the country. 
+                            Our experts combine form and function in bringing your vision to life. Create a room in your 
+                            own style with our collection and make your property a reflection of you and what you love.
+                          
+                          </p>
+                          <div class="shop-text">
+                              <h2>SHOP</h2>
+                              <h2>NOW</h2>
+                              <div class="arrow">
+                                  <img src="images/icon-arrow.svg" alt="">
+                              </div>
+                          </div>
+                      </div>
+
+                    <div class="arrow-box">
+                        <div id="leftarrow"><img height="50%" src="images/icon-angle-left.svg" alt=""></div>
+                        <div id="rightarrow"><img height="50%" src="images/icon-angle-right.svg" alt=""></div>
+                    </div>
+                </div>
+
+    
+
+</div>
+
+<div class="lower-content">
+    <div class="img1">
+       
+    </div>
+    <div style="display:flex;
+    justify-content:center;
+    align-items: center;">
+      <div class="lower-middle-text">
+          <h3>ABOUT OUR FURNITURE</h3>
+          <p>Our multifunctional collection blends design and function to suit your individual taste.
+            Make each room unique, or pick a cohesive theme that best express your interests and what
+            inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+            or anything in between. Product specialists are available to help you create your dream space.
+            </p>
+    </div>
+    </div>
+    <div class="img2">
+    
+    </div>
+
+</div>
+
+
+
+</body>
+
+<script>
+
+var leftarrow=document.getElementById("leftarrow");
+var rightarrow=document.getElementById("rightarrow");
+var toprighttext=document.getElementById("top-right-text");
+
+var hamburger=document.getElementById("hamburger");
+var sidemenu=document.getElementById("sidemenu");
+var close=document.getElementById("close");
+var header=document.getElementById("header");
+
+close.addEventListener("click",()=>{
+    close.classList.toggle("closebtn");
+    sidemenu.classList.toggle("height");
+    
+})
+
+hamburger.addEventListener("click",()=>{
+
+    sidemenu.classList.toggle("height");
+    close.classList.toggle("closebtn");
+   
+})
+
+var obj=[{img:"images/desktop-image-hero-1.jpg",
+text:["Discover innovative ways to decorate","We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love."
+]},
+{img:"images/desktop-image-hero-2.jpg",text:[ 'We are available all across the globe',
+"With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today."]
+},
+{img:"images/desktop-image-hero-3.jpg",text:[" Manufactured with the best materials",
+"Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office."]
+}]
+var header=document.getElementById("header");
+ var count=0;
+
+leftarrow.addEventListener("click",()=>{
+if(count==0)
+{
+    count=obj.length-1;
+}
+else{
+    count-=1;
+}
+header.style.backgroundImage=`url(${obj[count].img})`;
+toprighttext.innerHTML=" <h1>"+
+                            obj[count].text[0]+
+                         " </h1>"+
+                         `<p>${obj[count].text[1]}</p>`+
+                          '<div class="shop-text">'+
+                              '<h2>SHOP</h2>'+
+                             ' <h2>NOW</h2>'+
+                             ' <div class="arrow">'+
+                                  '<img src="images/icon-arrow.svg" alt="">'+
+                             ' </div></div>';
+
+})
+
+
+
+rightarrow.addEventListener("click",()=>{
+    if(count==obj.length-1){
+        count=0;
+    }
+    else
+    {
+
+        count+=1;
+    }
+    
+
+    header.style.backgroundImage=`url(${obj[count].img})`;
+toprighttext.innerHTML=" <h1>"+
+                            obj[count].text[0]+
+                         " </h1>"+
+                         `<p>${obj[count].text[1]}</p>`+
+                          '<div class="shop-text">'+
+                              '<h2>SHOP</h2>'+
+                             ' <h2>NOW</h2>'+
+                             ' <div class="arrow">'+
+                                  '<img src="images/icon-arrow.svg" alt="">'+
+                             ' </div></div>';
+})
+</script>
+</html>
