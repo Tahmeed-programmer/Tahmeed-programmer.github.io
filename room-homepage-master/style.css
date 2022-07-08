@@ -218,7 +218,7 @@ li a{
     height: 32%;
     background-color: #fff;
     transform: translateY(-200%);
-    transition: transform 270ms linear;
+    transition: transform 420ms linear;
     align-items: center;
     padding: 0 2em;
     display: flex;
@@ -230,7 +230,7 @@ li a{
     align-items: center;
     cursor: pointer;
     transform:rotate(180deg);
-    transition: transform 560ms linear;
+    transition: transform 660ms linear;
 }
 
 .closebtn{
@@ -293,6 +293,7 @@ li a{
         position: absolute;
         right:0;
        top: 60vh;
+     
 
     }
 
