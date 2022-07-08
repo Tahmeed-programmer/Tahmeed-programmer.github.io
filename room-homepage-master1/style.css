@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root{
+    --DarkGray: hsl(0, 0%, 63%);
+--Black: hsl(0, 0%, 0%);
+--White: hsl(0, 0%, 100%);
+--VeryDarkGray: hsl(0, 0%, 27%);
+}
+
+body{
+    padding:0;
+    margin:0;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    font-family: 'DM Sans';
+    position: relative;
+    width: 100vw;
+
+}
+
+.top-content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+   
+   
+    
+}
+
+header{
+    border-top: 2px solid black;
+   
+    background-image: url(images/desktop-image-hero-1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    position: relative;
+    
+
+}
+
+.head{
+   display: flex;
+  align-items:center;
+}
+
+header h2{
+    color:var(--White);
+    font-weight: 700;
+    width: fit-content;
+   
+}
+ul{
+    list-style-type: none;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+   padding-top: 3px;
+   width: 50%;
+    
+}
+li:hover{
+  
+    border-bottom: 4px solid #fff;
+}
+li a{
+    font-weight: 600;
+    color:var(--Black);
+    text-decoration: none;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.top-right-side{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+  
+ 
+    flex-direction: column;
+    
+    
+    
+}
+
+.top-right-text{
+
+   
+    padding: 4.5rem;
+    padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+   
+}
+
+.top-right-text p{
+    color:var(--DarkGray);
+   
+
+}
+
+.top-right-text h1{
+    
+    width: 80%;
+    font-weight:700;
+    color: var(--Black);
+    margin-bottom: 0%;
+    font-size: 2.2rem;
+}
+
+.shop-text{
+    letter-spacing:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 0.8rem;
+    margin-bottom: 0%;
+    cursor: pointer;
+}
+
+.arrow-box{
+   
+    display: flex;
+
+    background-color: black;
+    width:9rem;
+    height: 4rem;
+}
+
+.arrow-box>div{
+
+    cursor: pointer;
+   
+}
+#leftarrow{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+#rightarrow{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+
+
+.arrow-box>div:hover{
+    opacity: 0.6;
+    background-color: grey;
+}
+
+.lower-content{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    height: 10rem;
+   
+    
+}
+
+.lower-middle-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0% 2rem;
+    
+}
+
+.lower-middle-text>p{
+    color: var(--DarkGray);
+}
+
+.lower-middle-text h3{
+    margin-bottom: 0;
+    letter-spacing:0.3rem;
+    font-weight: 800;
+ 
+
+}
+
+.img1{
+    background-image: url("images/image-about-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+   }
+
+.img2{
+    background-image: url("images/image-about-light.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+}
+
+
+.sidemenu{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 999;
+    width: 83%;
+    height: 32%;
+    background-color: #fff;
+    transform: translateY(-200%);
+    transition: transform 420ms linear;
+    align-items: center;
+    padding: 0 2em;
+    display: flex;
+
+}
+
+.close{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transform:rotate(180deg);
+    transition: transform 660ms linear;
+}
+
+.closebtn{
+    transform: rotate(0deg);
+}
+
+.display{
+    display: flex;
+    margin-left: 6%;
+    justify-content: flex-start;
+    width: 50%;
+    align-items: center;
+   
+}
+
+.display li{
+    margin-left: 6%;
+}
+
+.display a{
+    color:black
+}
+
+
+
+.height{
+    transform: translateY(0%);
+}
+
+.hamburger{
+    display: none;
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:1000px){
+    header{
+        background-image: url("images/mobile-image-hero-1.jpg");
+        background-size:cover;
+        background-position: center;
+      
+        height: 60vh;
+       
+    }
+
+    .top-content{
+       display: flex;
+       flex-direction: column;
+       
+       position: relative;
+       
+    }
+
+    .top-right-side{
+        width: 100vw;
+    }
+    .arrow-box{
+
+        position: absolute;
+        right:0;
+       top: 60vh;
+     
+
+    }
+
+    .top-right-text{
+       padding: 2em;
+       padding-top: 0;
+    }
+
+  body{
+      display: flex;
+      flex-direction: column;
+      grid-auto-rows: 100vw;
+  }
+
+  .lower-content{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+   
+      height: auto;
+  }
+
+  .img1{
+      height: 15rem;
+  }
+  .img2{
+      height: 15rem;
+  }
+
+
+}
+
+
+
+@media screen and (max-width:500px) {
+    header{
+        height: 40vh;
+    }
+    .arrow-box{
+        top:40vh
+    }
+
+  header ul{
+       display: none;
+   }
+   
+   header h2{
+       display: flex;
+       justify-content: center;
+      font-size: 1.8rem;
+       width: 80%;
+   }
+
+   .hamburger{
+       display: block;
+       cursor: pointer;
+      
+   }
+
+   .hamburger img{
+       height: 1.3rem;
+   }
+
+    .top-right-text{
+        padding: 1em;
+    }
+    .top-right-side h1{
+        width: auto;
+    }
+}
+
