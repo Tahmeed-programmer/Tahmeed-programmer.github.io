@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Source+Sans+Pro:wght@900&display=swap');
+
+header{
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+body{position: relative;
+margin-bottom: 0%;
+padding-bottom: 0%;}
+.text{
+    padding-right: 15px;
+    font-weight: 100;
+}
+
+.gb_Ue{
+    font-size: 13px;
+    white-space: nowrap;
+    line-height: normal;
+    cursor: pointer;
+    fill: currentColor;
+    color: #5f6368;
+    opacity: 1;
+    height: 30px;
+    padding-right: 15px;
+}
+
+header button{
+    font: 13px/27px Roboto,Arial,sans-serif;
+    white-space: nowrap;
+    display: inline-block;
+    outline: none;
+    font-family: Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+    margin-right: 8px;
+    min-width: 96px;
+    padding: 9px 23px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    margin-left: 8px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+canvas{display:block}
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Source Sans Pro";
+  font-size: 5em;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.main-google{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #202124;
+    flex-shrink: 0;
+    max-height: 310px;
+    height: calc(100% - 560px);
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.footer{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #202124;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    margin-top: 10%;
+}
+
+.qarstb {
+    flex-grow: 1;
+}
+.search-bar{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #202124;
+    display: flex;
+    z-index: 3;
+    height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 390px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+.buttons{
+    margin-top: 15px;
+}
+
+button{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
